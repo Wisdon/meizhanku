@@ -1,0 +1,47 @@
+/*首页特有的展示页面*/
+#wrap #leftBody .leftDiv1 h2 {  /*div本身是唯一的，之所以添加#wrap是为了理清脉络*/
+	color:#000;  /*黑颜色*/
+	font-size:24px;
+	font-weight:normal;
+	margin:25px 0 20px 0;
+}
+#wrap #leftBody .leftDiv1  p {
+	color:#555;
+}
+#wrap #leftBody .leftDiv1  p a {
+	color:#0074C5;
+}
+
+#wrap #leftBody .leftDiv2 h2 {
+	color:#000;
+	font-size:24px;
+	font-weight:normal;
+	margin:25px 0 20px 0;
+}
+
+#wrap #leftBody .leftDiv2 ul li {
+	width:270px;
+	height:170px;
+	background:#F1F2EA;
+	border:1px solid #D5D7CA;  /*设置边框*/
+	padding:6px;
+	float:left;   /*左浮动，左边的距离不够，那么它会掉第二排*/
+	margin:0 25px 25px 0;
+}
+#wrap #leftBody .leftDiv2 ul li p {
+	font-size:16px;
+	color:#000;
+	margin-top:10px;
+	font-weight:bold;
+}
+
+#wrap #leftBody .leftDiv3 {
+	clear:both;   /*如果没写这句话，“更多”的按钮会直接浮在图片的右边*/
+}
+#wrap #leftBody .leftDiv3 a {
+	
+}
+
+
+
+

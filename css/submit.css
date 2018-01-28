@@ -1,0 +1,29 @@
+/*提交表单*/
+#leftBody p.p0 {
+	color:#000;
+	font-size:18px; 
+	margin:30px 0 30px 0;
+}
+
+#leftBody form  label {
+	display:block;   /*label默认是inline是一行，用了block会换行*/
+	font-size:14px;
+	color:#555555;
+	margin:15px 0 3px 0;
+}
+#leftBody form  input { /*所有的input框都是高度为20px*/
+	height:20px;
+}
+
+#leftBody form  input.btn_sub {/*其中部分代码已经调到共用中去*/
+
+	height:27px;  /*注意这里的高度和上一个的高度是不一样的*/
+
+	border:none;
+	cursor:pointer;
+	float:left;
+	margin-top:10px;
+}
+#leftBody form  input.btn2 {
+	margin-left:165px;
+}

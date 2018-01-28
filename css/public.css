@@ -1,0 +1,272 @@
+/*共有的代码写在同一个css文件里*/
+/*基本格式初始化结束*/
+body,div,h1,h2,h3,h4,h5,h6,p,pre,form,ul,ol,li,dl,dt,dd,img {
+	margin:0px;  /*外边距为0*/
+	padding:0px;   /*内边距为0*/
+}
+
+body{
+	font-size: 13px;
+}
+
+ul{ list-style: none; }
+
+img，a img{
+    border:none;     /*因为不同的浏览器的版本会存在边框的显示问题*/
+ }
+
+ a{text-decoration: none;}
+
+a:hover{text-decoration: underline;}
+
+
+.auto {      /*顶部的内容相对于相对于整个版面来说是居中的*/ 
+	width:980px;
+	margin:0 auto;
+}
+
+/*基本格式初始化结束*/
+
+#main {   /*设置主题内容的上部分的渐变背景*/
+	background:url(../images/main_top_bg.jpg) repeat-x;
+}
+ /*一个div id中只能用一个背景图片，由于main的底部也需要背景图片，因此我们
+		   又要创建一个div main1 
+	
+		   */
+#main1{     /*设置主题内容的下部分的渐变背景——主体部分的第二个id*/
+	background:url(../images/main1_bottom_bg.jpg) 0px bottom repeat-x;
+	/*0px bottom:对应x y轴;*/
+
+}
+
+/*查看更多的按钮样式*/
+.btnstyle{
+	background:url(../images/default.png);   
+	display:block;
+	width:103px;    /*定长宽之前要block,不要定长宽没有用的*/
+	height:27px;
+	text-align:center;  /*在模块中水平居中*/
+	line-height:27px;   /*在模块中垂直居中*/ 	
+	color:#ffffff;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+.btnstyle:hover{    /*查看更多激活时候的状态*/
+  background:url(../images/d_hover.png); /*鼠标放上去会变颜色的，所以是两张不同的图片*/
+}
+
+
+
+/*头部开始*/
+#header {
+	height:452px;
+	background:url(../images/top_bg.jpg) repeat-x;
+	color:#fff;
+}
+
+#top {
+	height:100px;
+	
+}
+
+#top .logo {
+	width:291px;      /*logo设置logo图片的宽度，s右边没有地方给span放，也就放下来了*/
+	padding:25px 0 0 25px;   /*使图片和span内容居中*/ 
+	float:left;    
+}
+#top h1 span {
+	font-size:14px;
+	color:#CCCCCC;
+	float:right; 
+}
+
+#top .search {
+	width:280px;
+	height:50px;
+	float:right;    /*前面的logo区域要左浮动，表单这里要右浮动，这样两样内容一排*/ 
+	margin:30px 30px 0px 20px;  /*设置是为了是内容居中*/		
+}
+
+#top .search .text {
+	width:190px;
+	height:25px;
+	background:#161B1F;
+	color:#BCBCBC;   /*框中的字体有颜色才能看得清楚*/
+	border:1px solid #ccc;     
+}
+
+#top .search .submit {
+	width:80px;
+	height:28px;
+	cursor:pointer;
+}
+
+#nav {
+	height:50px;	
+}
+
+#nav ul {
+	margin:10px 0 0 25px;   /*整体列表的设置*/
+}
+
+#nav ul li {
+	float:left;   /*左浮动，一刷新到一排去了*/
+	margin:0 10px 0 0;
+}
+
+#nav ul li a {   /*通过板块进行拉伸两者文字之间的宽度，上边通过margin拉伸两板块的间距*/
+	color:black;
+	font-size:13px;
+	font-weight:bold;
+	display:block;
+	width:103px;  /*模块的高度和宽度的设置*/
+	height:27px;
+	text-align:center;  /*在模块中水平居中*/
+	line-height:27px;   /*在模块中垂直居中*/ 	
+}
+
+#nav ul li a:hover {
+	background:url(../images/hover.png);    /*背景的尺寸为模块的高度和宽度的设置*/
+	color:#fff;
+	text-decoration:none;
+}
+
+#runplay {
+	height:301px;
+	background:url(../images/runplay_bg.jpg);   
+}
+
+#runplay .left {
+	width:300px;   /*首先定义一个长度，要不就会太长了*/
+	float:left;
+	margin:50px 0 0 30px;
+	display:inline;   /*IE6左边挤了2倍的距离，是因为都设了左边浮动，再去挤外边距
+	                  导致的，需要inline来帮忙去掉*/
+}
+#runplay .right {
+	width:300px;
+	float:left;
+	margin:50px 0 0 80px;
+	display:inline;  /*IE6左边挤了2倍的距离，是因为都设置为了左边浮动，再去挤外边距
+	                  导致的，会产生双倍计算的问题，需要inline来帮忙去掉*/
+}
+
+#runplay .right dl dt {
+	font-size:24px;
+	margin:0 0 20px 0;   /*往下挤一点*/
+}
+#runplay .right dl dd.txt {
+	font-size:16px;
+	color:#ffffff;
+	margin:0 0 20px 0;    /*往下挤一点*/
+}	 
+
+/*头部结束*/
+
+/****中间部分居中*******/
+#wrap {   /*主体内容设置的第三个别名，且设置参数*/
+	width:920px;
+	height:850px;
+	margin:0 auto;  /*要居中首先要在前面定义一个宽度和高度*/
+}
+
+/****中间左侧部分*******/
+#wrap #leftBody {
+	width:620px;
+	height:850px;
+	float:left;
+}
+
+/****中间右侧部分*******/
+#wrap #rightBody {
+	width:240px;
+	height:850px; 
+	float:right;        /*要使右边元素与上边的元素在一排，我们需要将两个元素设置浮动*/
+}
+
+
+/********底部开始**************/
+#footer {
+	height:100px;
+	background:url(../images/footer_bg.jpg) repeat-x;
+}
+
+#footer p {
+	text-align:center;  /*文本内容居中*/
+	color:#fff;
+	line-height:200%;
+}
+	
+#footer p.p1 {
+	padding-top:15px;
+}
+
+#footer p a {
+	color:#fff;
+	text-decoration:underline;
+	margin:0 20px 0 0;
+}
+
+#footer p a.last {
+	margin:0;
+}
+
+/*************底部结束***************/
+
+/*右侧栏是公共的*/
+#rightBody .rightDiv1 h2 {
+	color:#000;
+	font-size:24px;
+	font-weight:normal;
+	margin:25px 0 0 0;
+}
+#rightBody .rightDiv1 ul li {
+	border-bottom:1px dashed #CCC;
+	height:70px;        /*每一个li连接时间扩充间距*/
+	padding:15px 0 0 0;
+}
+#rightBody .rightDiv1 ul li h3 a {
+	color:#0074C5;
+	font-weight:normal;   /*标题样式原来是有加粗的*/
+	text-decoration:underline;
+}
+#rightBody .rightDiv1 ul li h3 a:hover {
+	color:#009900;
+}
+#rightBody .rightDiv1 ul li p {
+	color:#555;
+	margin:5px 0 0 0;    /*拉伸行距*/
+}
+
+#rightBody .rightDiv2 dl {
+	height:64px;
+	margin:35px 0 0 0;
+}
+#rightBody .rightDiv2 dl dt {
+	padding:8px 0 3px 0;
+}
+#rightBody .rightDiv2 dl dt a {
+	font-size:24px;
+	color:#333333;
+	font-weight:bold;
+}
+#rightBody .rightDiv2 dl dd {
+	font-size:15px;
+	color:#333333;
+	font-weight:bold;
+}
+
+#rightBody .rightDiv2 dl.dl1 {
+	background:url(../images/twitter.png) 160px center no-repeat;
+	/*160px：水平x轴
+	 center：垂直y轴是居中的
+	 */
+}
+
+#rightBody .rightDiv2 dl.dl2 {
+	background:url(../images/rss.png) 160px center no-repeat;
+}
+/*********右侧栏是公共的，结束设置***************/
+
